@@ -47,3 +47,22 @@ echo $m;
 ?>
     </div>
 </div>
+<?php
+/**
+ * Outputs
+ *
+ *  <div class="navbar">
+ *     <div class="navbar-inner">
+ *         <a class="brand" href="#">Title</a>
+ * <ul class="nav"><li><a href="/">Home</a></li>
+ * <li class="active"><a href="/link">Link</a></li>
+ * <li><a href="#">Dropdown Button<b class="caret"></b></a>
+ * <ul class="dropdown-menu"><li><a href="/menu/1">Dropdown Item 1</a></li>
+ * <li><a href="/menu/2">Dropdown Item 2</a></li>
+ * <li><a href="/menu/3">Dropdown Item 3</a></li>
+ * <li><a href="/menu/4">Dropdown Item 4</a></li>
+ * <li><a href="/menu/5">Dropdown Item 5</a></li></li></ul>
+ *     </div>
+ * </div>
+ */
+?>
