@@ -1,6 +1,8 @@
 <?php
 namespace Menu;
-
+/**
+ * created by Darko Luketic <info@icod.de>
+ */
 class MenuItem
 {
     private $_title = "";
@@ -19,6 +21,18 @@ class MenuItem
     private $_header = array();
     private $_has_header = false;
 
+    /**
+     * 
+     * @param type $title
+     * @param type $url
+     * @param type $class
+     * @param type $id
+     * @param type $role
+     * @param type $data_toggle
+     * @param type $data_target
+     * @param type $aria_labelledby
+     * @return \Menu\MenuItem
+     */
     public function __construct($title, $url, $class = null, $id = null, $role = null, $data_toggle = null, $data_target = null, $aria_labelledby = null)
     {
         $this->_title = $title;
@@ -31,11 +45,29 @@ class MenuItem
         return $this;
     }
 
+    /**
+     * 
+     * @param type $title
+     * @param type $url
+     * @param null $class
+     * @param null $id
+     * @param null $role
+     * @param null $data_toggle
+     * @param null $data_target
+     * @param null $aria_labelledby
+     * @return \self
+     */
     public static function factory($title, $url, $class = null, $id = null, $role = null, $data_toggle = null, $data_target = null, $aria_labelledby = null)
     {
         return new self($title, $url, $class = null, $id = null, $role = null, $data_toggle = null, $data_target = null, $aria_labelledby = null);
     }
 
+    /**
+     * 
+     * @param type $what
+     * @param type $css_class
+     * @return \Menu\MenuItem
+     */
     public function setCurrent($what = 'li', $css_class = 'active')
     {
         switch ($what)
@@ -64,6 +96,12 @@ class MenuItem
         return $this;
     }
 
+    /**
+     * 
+     * @param type $class
+     * @param type $id
+     * @return \Menu\MenuItem
+     */
     public function addHeader($class = null, $id = null)
     {
         if (!is_null($class))
@@ -77,43 +115,78 @@ class MenuItem
         $this->_has_header = true;
         return $this;
     }
-
+    
+    /**
+     * 
+     * @param type $boolean
+     * @return \Menu\MenuItem
+     */
     public function addCaret($boolean = true)
     {
         $this->_add_caret = $boolean;
         return $this;
     }
     
+    /**
+     * 
+     * @param type $boolean
+     * @return \Menu\MenuItem
+     */
     public function setHasChildren($boolean = true)
     {
         $this->_has_children = $boolean;
         return $this;
     }
     
+    /**
+     * 
+     * @param type $boolean
+     * @return \Menu\MenuItem
+     */
     public function setIsLast($boolean = true)
     {
         $this->_is_last = $boolean;
         return $this;
     }
 
+    /**
+     * 
+     * @param type $role
+     * @return \Menu\MenuItem
+     */
     public function setRole($role)
     {
         $this->_role = $role;
         return $this;
     }
 
+    /**
+     * 
+     * @param type $data_toggle
+     * @return \Menu\MenuItem
+     */
     public function setData_toggle($data_toggle)
     {
         $this->_data_toggle = $data_toggle;
         return $this;
     }
 
+    /**
+     * 
+     * @param type $data_target
+     * @return \Menu\MenuItem
+     */
     public function setData_target($data_target)
     {
         $this->_data_target = $data_target;
         return $this;
     }
 
+    /**
+     * 
+     * @param type $aria_labelledby
+     * @return \Menu\MenuItem
+     */
     public function setAria_labelledby($aria_labelledby)
     {
         $this->_aria_labelledby = $aria_labelledby;
