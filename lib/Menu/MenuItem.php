@@ -60,7 +60,7 @@ class MenuItem
      */
     public static function factory($title, $url, $class = null, $id = null, $role = null, $data_toggle = null, $data_target = null, $aria_labelledby = null)
     {
-        return new self($title, $url, $class = null, $id = null, $role = null, $data_toggle = null, $data_target = null, $aria_labelledby = null);
+        return new self($title, $url, $class, $id, $role, $data_toggle, $data_target, $aria_labelledby);
     }
 
     /**
