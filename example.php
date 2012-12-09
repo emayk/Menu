@@ -43,7 +43,6 @@ $m->addMenuItem('Dropdown Item 2', '/menu/2');
 $m->addMenuItem('Dropdown Item 3', '/menu/3');
 $m->addMenuItem('Dropdown Item 4', '/menu/4');
 $m->addMenuItem('Dropdown Item 5', '/menu/5')->setIsLast();
-print_r($m);
 echo $m;
 ?>
     </div>
@@ -52,12 +51,12 @@ echo $m;
 /**
  * Outputs
  *
- *  <div class="navbar">
+ * <div class="navbar">
  *     <div class="navbar-inner">
  *         <a class="brand" href="#">Title</a>
  * <ul class="nav"><li><a href="/">Home</a></li>
  * <li class="active"><a href="/link">Link</a></li>
- * <li><a href="#">Dropdown Button<b class="caret"></b></a>
+ * <li class="dropdown"><a href="#" class="dropdown-toggle">Dropdown Button<b class="caret"></b></a>
  * <ul class="dropdown-menu"><li><a href="/menu/1">Dropdown Item 1</a></li>
  * <li><a href="/menu/2">Dropdown Item 2</a></li>
  * <li><a href="/menu/3">Dropdown Item 3</a></li>
