@@ -34,7 +34,7 @@ $m->addMenuItem('Home', '/')->addHeader('nav');
 $m->addMenuItem('Link', '/link',true);
 $m->addMenuItemObject(
         \Menu\MenuItem::factory('Dropdown Button', '#', array('li' => 'dropdown', 'a' => 'dropdown-toggle'),
-                null, null, 'dropdown', null, null)
+                null, null, 'array('a' => 'dropdown', null, null)
         ->setHasChildren()
         ->addCaret()
         );
@@ -56,7 +56,7 @@ echo $m;
  *         <a class="brand" href="#">Title</a>
  * <ul class="nav"><li><a href="/">Home</a></li>
  * <li class="active"><a href="/link">Link</a></li>
- * <li class="dropdown"><a href="#" class="dropdown-toggle">Dropdown Button<b class="caret"></b></a>
+ * <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Button<b class="caret"></b></a>
  * <ul class="dropdown-menu"><li><a href="/menu/1">Dropdown Item 1</a></li>
  * <li><a href="/menu/2">Dropdown Item 2</a></li>
  * <li><a href="/menu/3">Dropdown Item 3</a></li>
