@@ -36,7 +36,7 @@ class Menu
     public function setIsLast($boolean = true)
     {
         $mi = $this->getLastItem();
-        $mi->setIsLast();
+        $mi->setIsLast($boolean);
         return $this;
     }
 
