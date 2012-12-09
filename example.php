@@ -34,7 +34,7 @@ $m->addMenuItem('Home', '/')->addHeader('nav');
 $m->addMenuItem('Link', '/link',true);
 $m->addMenuItemObject(
         \Menu\MenuItem::factory('Dropdown Button', '#', array('li' => 'dropdown', 'a' => 'dropdown-toggle'),
-                null, null, 'array('a' => 'dropdown'), null, null)
+                null, null, array('a' => 'dropdown'), null, null)
         ->setHasChildren()
         ->addCaret()
         );
