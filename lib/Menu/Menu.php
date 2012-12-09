@@ -7,6 +7,8 @@ namespace Menu;
 class Menu
 {
     private $_menu_items = array();
+    private $_header_set = false;
+    
     /**
     * 
     * @return \Menu\Menu
@@ -106,6 +108,10 @@ class Menu
         foreach ($this->_menu_items as $mi)
         {
             $s .= $mi . "\n";
+        }
+        if ($this->_header_set)
+        {
+            $s .= '</ul>';
         }
         return $s;
     }

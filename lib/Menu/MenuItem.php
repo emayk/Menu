@@ -46,7 +46,8 @@ class MenuItem
     }
 
     /**
-     * 
+     * Used for method chaining
+     * Obsolete in PHP 5.4
      * @param type $title
      * @param type $url
      * @param null $class

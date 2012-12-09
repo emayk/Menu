@@ -11,7 +11,7 @@ $m->addMenuItemObject(
         );
 $m->addMenuItem('Page 2-1', '/page/2/1', false, null, null, null, null, null, null, null, false, false)->addHeader('nav');
 $m->addMenuItem('Page 2-2', '/page/2/2', false, null, null, null, null, null, null, null, false, true)->setIsLast();
-$m->addMenuItem('Page 3', '/page/3')->setIsLast();
+$m->addMenuItem('Page 3', '/page/3');
 echo $m;
 /*
  * Outputs
@@ -22,4 +22,28 @@ echo $m;
  * <li><a href="/page/2/2">Page 2-2</a></li></li></ul>
  * <li><a href="/page/3">Page 3</a></li></li></ul>
  */
+unset($m);
 ?>
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="#">Title</a>
+<?php
+// Navbar with Dropdown
+$m = new \Menu\Menu();
+$m->addMenuItem('Home', '/')->addHeader('nav');
+$m->addMenuItem('Link', '/link',true);
+$m->addMenuItemObject(
+        \Menu\MenuItem::factory('Dropdown Button', '#', array('li' => 'dropdown', 'a' => 'dropdown-toggle'),
+                null, null, 'dropdown', null, null)
+        ->setHasChildren()
+        ->addCaret()
+        );
+$m->addMenuItem('Dropdown Item 1', '/menu/1')->addHeader('dropdown-menu');
+$m->addMenuItem('Dropdown Item 2', '/menu/2');
+$m->addMenuItem('Dropdown Item 3', '/menu/3');
+$m->addMenuItem('Dropdown Item 4', '/menu/4');
+$m->addMenuItem('Dropdown Item 5', '/menu/5')->setIsLast();
+echo $m;
+?>
+    </div>
+</div>
