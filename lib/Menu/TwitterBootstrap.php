@@ -29,9 +29,9 @@ class TwitterBootstrap
         return '</div></div>';
     }
 
-    public function addDropdownButton(\Menu\Menu $m, $menuid = 'dLabel', $url = '#', $current = false)
+    public function addDropdownButton(\Menu\Menu $m, $title, $menuid = 'dLabel', $url = '#', $current = false)
     {
-        $mo = \Menu\MenuItem::factory('Dropdown Button', $url, 
+        $mo = \Menu\MenuItem::factory($title, $url, 
                 array('li' => 'dropdown', 'a' => 'dropdown-toggle'),
                 array('a' => $menuid), 
                 array('a' => 'button'),
