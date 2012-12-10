@@ -58,7 +58,7 @@ class TwitterBootstrap
             {
                 $m->addMenuItem($title, $url)->addHeader('dropdown-menu');
             }
-            if ($i == $cs)
+            else if ($i == $cs)
             {
                 $m->addMenuItem($title, $url)->setIsLast();
             }
