@@ -51,11 +51,16 @@ class TwitterBootstrap
     public function addDropdownMenu(\Menu\Menu $m, array $structure)
     {
         $i = 0;
+        $cs = count($structure)-1;
         foreach ($structure as $title => $url)
         {
             if ($i == 0)
             {
                 $m->addMenuItem($title, $url)->addHeader('dropdown-menu');
+            }
+            if ($i == $cs)
+            {
+                $m->addMenuItem($title, $url)->setIsLast();
             }
             else
             {
