@@ -4,7 +4,7 @@
     "description": "Twitter Bootstrap friendy navigation menu builder",
     "keywords": ["menu","nav","navigation","twitter bootstrap"],
     "homepage": "https://github.com/dalu/Menu",
-    "license": "MIT",
+    "license": "(LGPL-2.1 or GPL-3.0+)",
     "authors": [
         {
             "name": "Darko Luketic",
